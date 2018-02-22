@@ -43,7 +43,7 @@ class StringCalculatorSpec extends WordSpec with MustMatchers {
       val e = intercept[IllegalArgumentException] {
         StringCalculator.add("1,-2,-3")
       }
-    e.getMessage mustEqual "Requirement failed: -2-3"
+    e.getMessage mustEqual "Requirement failed: -2, -3"
     }
 
   }
