@@ -31,13 +31,14 @@ class StringCalculatorSpec extends WordSpec with MustMatchers {
       StringCalculator.add("1,2,3") mustEqual 6
     }
 
-    "Return 6 when given '1\n2,3'" in {
+    "Return 6 when given '1\\n2,3'" in {
       StringCalculator.add("1\n2,3") mustEqual 6
     }
 
-    "Return 3 when given '//;\n1;2'" in {
-      StringCalculator.add("//;\n1;2") mustEqual 3
+    "Return 3 when given '//;\\n1;2'" in {
+      StringCalculator.add("//;\\n1;2") mustEqual 3
     }
+
     "Throw IllegalArgumentException when given '1,-2,-3'" in {
 
       val e = intercept[IllegalArgumentException] {
